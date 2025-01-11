@@ -1,0 +1,200 @@
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Main layout */
+.App {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f4f8;  /* Soft light gray background */
+}
+
+/* Generator container styling */
+.generator {
+  background-image: linear-gradient(-225deg, #A9F1D6 0%, #A3D8FF 100%);  /* Soft gradient of mint and turquoise */
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 35px;
+  width: 100%;
+  max-width: 480px;
+  text-align: center;
+}
+
+/* Header styling */
+.generator__header {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2F3C3B;  /* Darker gray for header text */
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+/* Password display section */
+.generator__password {
+  background-color: #45B39D;  /* Muted dark turquoise */
+  color: white;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  height: 60px;
+  font-size: 15px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  word-wrap: break-word;
+  letter-spacing: 0.5px;
+}
+
+.generator__password h3 {
+  margin: 0;
+  overflow-wrap: break-word;
+}
+
+/* Copy button styling */
+.copy__btn {
+  background-color: #45B39D;  /* Muted dark turquoise */
+  border: none;
+  color: white;
+  padding: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.copy__btn:hover {
+  background-color: #36A085;  /* Slightly darker turquoise on hover */
+}
+
+/* Generate Password button styling */
+.generator__btn {
+  background-color: #4CAF50;  /* Rich sea green */
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 18px;
+  width: 100%;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.generator__btn:hover {
+  background-color: #388E3C;  /* Slightly darker sea green on hover */
+}
+
+/* Form group styling */
+.form-group {
+  display: flex;
+  justify-content: space-between; /* Pushes the label to the left and the checkbox to the right */
+  align-items: center; /* Ensures that label and input are vertically centered */
+  margin-bottom: 20px;
+}
+
+/* Styling for the labels */
+label {
+  font-size: 14px;
+  color: #444;  /* Dark gray for labels */
+  font-weight: 600;
+  margin-right: 15px; /*Added space between label and input */
+  display: inline-block;
+}
+
+/* Adjust the input number field */
+input[type="number"] {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  width: 40%;  /* Ensures the input field takes up more space */
+  font-size: 16px;
+  color: #333;
+  outline: none;
+}
+
+input[type="number"]:focus {
+  border-color: #45B39D;  /* Focus state in muted turquoise */
+}
+
+/* Checkbox styles */
+input[type="checkbox"] {
+  margin-top: 5px;
+}
+
+/* Checkbox selected state */
+input[type="checkbox"]:checked {
+  background-color: #45B39D;  /* Checked state in muted turquoise */
+  border-color: #45B39D;
+}
+
+/* Align the checkboxes container to the right */
+.checkbox-group {
+  display: flex;
+  justify-content: flex-end;  /* Align checkboxes to the right */
+  gap: 20px; /* Adds some space between checkboxes */
+}
+
+/* For individual checkbox label and checkbox */
+.checkbox-group label {
+  margin-right: 10px; /* Added space between label and checkbox */
+  font-size: 14px;
+  color: #333;
+}
+
+/* Toastify Notifications */
+.Toastify__toast-container {
+  z-index: 9999;
+}
+
+.Toastify__toast {
+  font-size: 14px;
+  padding: 15px;
+  border-radius: 8px;
+  color: white;
+}
+
+.Toastify__toast--error {
+  background-color: #f44336;  /* Error state in red */
+}
+
+.Toastify__toast--success {
+  background-color: #4CAF50;  /* Success state in rich green */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .generator {
+    width: 85%;
+    padding: 20px;
+  }
+
+  .generator__password {
+    font-size: 20px;
+    padding: 12px;
+    height: 50px;
+  }
+
+  .generator__btn {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .copy__btn {
+    font-size: 18px;
+  }
+
+  .form-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  input[type="number"] {
+    width: 100%;
+  }
+}
